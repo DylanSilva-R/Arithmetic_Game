@@ -1,0 +1,169 @@
+body
+{
+    background-color: rgb(1, 116, 190);
+}
+
+.innerBoundary
+{
+    background-color: rgb(255, 240, 206);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-color: red;
+    border-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+footer
+{
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+}
+
+h1, h2, .arithmeticOptions, label
+{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1
+{
+    background-color: rgb(12, 53, 106);
+    color: rgb(0, 0, 0);
+    margin: auto;
+    width: auto;
+}
+
+h2
+{
+    margin: auto;
+    width: auto;
+}
+
+.arithmeticOptions
+{
+    display: grid;
+    row-gap: 10px;
+    overflow: auto;
+}
+
+#maxAndMin
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    overflow: auto;
+}
+
+
+.optionOne
+{
+    display: inline-block;
+    margin: auto;
+}
+
+.optionTwo
+{
+    display: inline-block;
+    margin: auto;
+    padding: auto;
+}
+
+button
+{
+    display: grid;
+    padding: auto;
+    margin: auto;
+    justify-content: space-around;
+    background-color: rgb(255, 196, 54);
+    border-radius: 100px;
+    width: 250px;
+    margin: auto;
+}
+
+#equationContainer
+{
+    display: inline-block;
+    position: relative;
+    padding: auto;
+    background-color: rgb(12, 53, 106);
+    height: 150px;
+    border-radius: 50px;
+    top: 50vh;
+}
+
+#Equations
+{
+    position: relative;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 52px;
+    color: aqua;
+    left: 110px;
+    bottom: 110px;
+
+}
+
+#answer
+{
+    position: relative;
+    padding: auto;
+    border-radius: 50px;
+    height: 100px;
+    top: 20px;
+    right: 0;
+}
+
+.countdownTimer
+{
+    position: relative;
+    padding: auto;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(12, 53, 106);
+    border-radius: 50px;
+}
+
+#Timer
+{
+    color: aqua;
+    position: relative;
+    padding: auto;
+    margin: auto;
+    font-size: 25px;
+    left: 23px;
+    top: 35px;
+}
+
+#score
+{
+    background-color: rgb(12, 53, 106);
+    position: relative;
+    padding: auto;
+    margin: auto;
+    border-radius: 50px;
+}
+
+#scoreText
+{
+    color: rgb(255, 196, 54);
+    position: auto;
+    padding: auto;
+    margin: auto;
+    
+    font-size: 35px;
+}
+
+
+/*Color theme
+Navy = rgb(12, 53, 106)
+Blue = rgb(1, 116, 190)
+yellow = rgb(255, 196, 54)
+wedding = rgb(255, 240, 206)
+*/

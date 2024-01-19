@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+
+    <style>
+
+        body
+        {
+            background-color: rgb(1, 116, 190);
+        }
+
+        @keyframes fadeInAnimation
+        {
+            0%
+            {
+                opacity: 0;
+            }
+            100%
+            {
+                opacity: 1;
+            }
+        }
+        
+        h1, footer
+        {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 400px;
+            text-align: center;
+            border: black;
+        }
+
+        .userFirstAndLastName
+        {
+            display: grid;
+            gap: 15px;
+            animation: fadeInAnimation ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            text-align: center;
+        }
+
+        #submitBtn
+        {
+            display: grid;
+
+            gap: 15px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Welcome user!</h1>
+    <div class = "userFirstAndLastName">
+        <div class = "userFirstName">
+            <label for = "fName" >What is your first name?</label><br>
+            <input type = "text" id = "fName" name = "fName">
+        </div>
+
+        <div class = "userLastName">
+            <label for = "lName" >What is your last Name?</label><br>
+            <input type = "text" id = "lName" name = "lName">
+        </div>
+
+        <button onclick = "getUserFirstLast(); showNextButton()" id = "submitBtn">Submit</button>
+
+        <div style = "display: none", id = "nextPage">
+            <a href = "gameSetup.html">
+                <button onclick = "" id = "nextButton">Alright, time to setup your game</button>   
+            </a>
+        </div>
+
+    </div>
+
+    <script src = "holdData.js"></script>
+    <footer>Made by Dylan Silva-Rivas</footer>
+</body>
+</html>

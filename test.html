@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Container with Random Equations</title>
+
+    <style>
+        .dynamic-container {
+            display: inline-block;
+            position: relative;
+            padding: auto;
+            width: auto;
+            background-color: rgb(12, 53, 106);
+            height: 150px;
+            top: 50vh;
+            /*transition: width 0.3s; /* Optional: Add a smooth transition effect */
+        }
+
+        /* Optional: Style for input and paragraph */
+        input {
+            margin-bottom: 5px;
+        }
+
+        #equation
+        {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dynamic-container" id="dynamicContainer">
+        <input id = answer type="text" placeholder="Enter your answer">
+        <p id="equation">Loading equation...</p>
+    </div>
+
+    <script>
+        var answerInput = document.getElementById('answer');
+
+        function generateRandomEquation() {
+            // Replace this with your logic to generate random equations
+            const operands = ['+', '-', '*', '/'];
+            const equation = Math.floor(Math.random() * 10000) + operands[Math.floor(Math.random() * operands.length)] + Math.floor(Math.random() * 10000);
+            return equation;
+        }
+
+        function updateContainerSize() {
+            const container = document.getElementById('dynamicContainer');
+            const equationElement = document.getElementById('equation');
+
+            // Generate a random equation
+            const randomEquation = generateRandomEquation();
+            // Update the content and adjust container width
+            equationElement.textContent = randomEquation;
+
+            
+            if(equationElement.offsetWidth > container.offsetWidth)
+            {
+                container.style.width = equationElement.offsetWidth + 'px';
+            }else
+            {
+                const orginialWidth = container.style.width;
+                container.style.width = orginialWidth - (equationElement.offsetWidth * 0.1 + 'px');
+            }
+        }
+
+        answerInput.addEventListener("keypress", function(event)
+        {
+            if(event.key == 'Enter')
+            {
+                updateContainerSize();
+            }
+        });
+        // Initial update to display a random equation
+        updateContainerSize();
+    </script>
+
+</body>
+</html>

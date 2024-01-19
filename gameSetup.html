@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Setup</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+</head>
+<body>
+
+    <h1>Super Ultra Arithmetic</h1>
+    
+    <div class = "innerBoundary">
+        <h2>Which game mode would you like to play?</h2>
+        <h2>You may choose one or multiple options</h2>
+
+        <div class = "arithmeticOptions">
+            <div class = "checkboxes">
+                <input type = "checkbox" id = "additionCheckBox" data-tip = "Addition" type = "buttonA"><h3>Addition</h3></input>
+                <input type = "checkbox" id = "subtractionCheckBox" data-tip = "Subtraction" type = "buttonS"><h3>Subtraction</h3></input>
+                <input type = "checkbox" id = "multiplicationCheckBox" data-tip = "Multiplication" type = "buttonM"><h3>Multiplication</h3></input>
+                <input type = "checkbox" id = "divisionCheckBox" data-tip = "Division" type = "buttonS"><h3>Division</h3></input>    
+            </div>
+
+            <button id = "submitArithmeticOperations" onclick="checkCheckBoxes();">Submit</button>
+        </div>
+
+        <div style = "display: none" id = "maxAndMin">
+            <!--Be aware of this possible bug: Make sure that max input isn't lower than the min input.-->
+            <div class = "optionOne">
+                <p>Input the minimum and maximum values that you want to generate:</p>
+                <label id = labelOne for = "min">Input the lower boundary: </label>
+                <input type = "number" id = "min" name = "minValue">    
+            </div>
+
+            <div class = "optionTwo">
+                <label id = labelTwo for = "max">Input the upper boundary:</label>
+                <input type = "number" id = "max" name = "minValue">
+            </div>
+
+            <button onclick = "checkMinMaxAndCheck()" type= "button" id = "submitMaxAndMin">Submit max and min values</button>
+        </div>
+        <div style = "display: none", id = "timeOptions">
+            <!--Options: 30 seconds, 1 minute, or 5 minutes-->
+ 
+            <h2>Choose one of the three options:</h2>
+            <a href="equations.html">
+                <button onclick="getTimeData(30)">30 seconds</button>
+                <button onclick="getTimeData(60)">1 minute</button>
+                <button onclick="getTimeData(300)">5 mintues</button>    
+            </a>
+        </div>
+    </div> 
+    <script src = "setUp.js"></script>
+</body>
+</html>

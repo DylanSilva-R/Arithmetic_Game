@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <title>Equations</title>
+</head>
+<body>
+<h1>
+    Press enter when you input your answer!
+</h1>
+
+<h2>
+    If there is a division equation and you end up with a decimal, please round your answer.
+</h2>
+
+ <div class = "countdownTimer">
+    <div id = "Timer">0:00</div>
+ </div>
+
+ <div id = "equationContainer">
+    <input type = "number" id = "answer" required>
+    <p id = "Equations"></p>
+ </div>   
+
+ <div style = "display: none" id = "score">
+    <div id = "scoreText">Score: </div>
+ </div>
+
+</body>
+<script src = "generateEquations.js"></script>
+</html>

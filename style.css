@@ -39,8 +39,8 @@ h1
 
 h2
 {
-    margin: auto;
     width: auto;
+    margin-bottom: 5px
 }
 
 .arithmeticOptions
@@ -88,12 +88,11 @@ button
 #equationContainer
 {
     display: inline-block;
-    position: relative;
-    padding: auto;
+    margin: auto;
     background-color: rgb(12, 53, 106);
     height: 150px;
+    
     border-radius: 50px;
-    top: 50vh;
 }
 
 #Equations
@@ -104,9 +103,7 @@ button
     margin-right: auto;
     font-size: 52px;
     color: aqua;
-    left: 110px;
     bottom: 110px;
-
 }
 
 #answer
@@ -114,9 +111,11 @@ button
     position: relative;
     padding: auto;
     border-radius: 50px;
-    height: 100px;
-    top: 20px;
-    right: 0;
+    height: 90px;
+    top: 4px;
+    left: 60px;
+    font-size: 50px;
+    padding: .5em;
 }
 
 .countdownTimer
@@ -128,6 +127,7 @@ button
     width: 100px;
     background-color: rgb(12, 53, 106);
     border-radius: 50px;
+    margin-bottom: 5px;
 }
 
 #Timer
@@ -135,29 +135,31 @@ button
     color: aqua;
     position: relative;
     padding: auto;
-    margin: auto;
     font-size: 25px;
     left: 23px;
     top: 35px;
+    margin-bottom: 20px;
 }
 
 #score
 {
     background-color: rgb(12, 53, 106);
-    position: relative;
+    position: absolute;
     padding: auto;
     margin: auto;
     border-radius: 50px;
+    width: 300px;
+    margin-top: 50px
 }
 
 #scoreText
 {
     color: rgb(255, 196, 54);
-    position: auto;
+    position: absolute;
     padding: auto;
     margin: auto;
-    
     font-size: 35px;
+    text-align: center;
 }
 
 

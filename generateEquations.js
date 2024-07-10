@@ -21,7 +21,6 @@ const timeId = document.getElementById("Timer");
 let minutes = Math.floor(initialTime/60);
 let seconds = initialTime % 60;
 
-
 let timePassed = 0;
 let timeLeft = initialTime;
 
@@ -35,6 +34,13 @@ if(seconds < 10)
 
 document.getElementById("Timer").innerHTML = minutes + ":" + seconds;
 
+var input = document.querySelector('input'); // get the input element
+input.addEventListener('input', resizeInput); // bind the "resizeInput" callback on "input" event
+resizeInput.call(input); // immediately call the function
+
+function resizeInput() {
+  this.style.width = this.value.length + "ch";
+}
 
 function generateAdditionEq()
 {
